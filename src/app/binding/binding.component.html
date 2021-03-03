@@ -1,0 +1,41 @@
+<p>binding works!</p>
+
+
+<!--
+    Interpolation
+    What can we do
+{{2+3*10}}
+<br>
+{{headerTitle}}
+<br>
+{{"Welocme to angular " + headerTitle}}
+<br>
+{{headerTitle.length}}
+<br>
+{{headerTitle.toUpperCase()}}
+<br>
+{{logMSG()}} -->
+
+<!-- what cannot we do
+ {{a=2+6}} 
+{{siteURL}} -->
+
+<!-- Data binding
+<input type="text"  [id]="headerId"/> -->
+
+<!-- class binding
+<div class="text-success">This is success</div>
+<div [class]="textColor">This is success</div>
+
+<div [class.text-danger]="hasErr">Optionly rendered</div>
+
+<h1 [ngClass]="setOfClasses">Welcome to ITI</h1> -->
+
+<!-- 
+style binding
+<h1 style="color:red">This is style binding</h1>
+<h1 [style.color]="'red'">This is style binding again</h1>
+<h1 [style.color]="hasErr? 'red' : 'green'">This is style Binding from prop</h1>
+
+
+<h2 [ngStyle]="setOfStyles">Style binding</h2> -->
