@@ -10,6 +10,15 @@ import { LeftNavComponent } from './main-content/left-nav/left-nav.component';
 import { RightNavComponent } from './main-content/right-nav/right-nav.component';
 import { AuthModule } from 'src/auth/auth.module';
 import { BindingComponent } from './binding/binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { TestComponent } from './pipes/test/test.component';
+import { PrintmsgPipe } from './pipes/printmsg.pipe';
+import { SquarePipe } from './custom-pipes/square.pipe';
 
 @NgModule({
   declarations: [
@@ -19,12 +28,21 @@ import { BindingComponent } from './binding/binding.component';
     MainContentComponent,
     LeftNavComponent,
     RightNavComponent,
-    BindingComponent
+    BindingComponent,
+    EventBindingComponent,
+    TemplateReferenceVariableComponent,
+    TwoWayBindingComponent,
+    StructuralDirectivesComponent,
+    PipesComponent,
+    TestComponent,
+    PrintmsgPipe,
+    SquarePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // AuthModule
+    // AuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
