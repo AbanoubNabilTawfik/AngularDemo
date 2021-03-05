@@ -19,6 +19,11 @@ import { PipesComponent } from './pipes/pipes.component';
 import { TestComponent } from './pipes/test/test.component';
 import { PrintmsgPipe } from './pipes/printmsg.pipe';
 import { SquarePipe } from './custom-pipes/square.pipe';
+import { ParentComponent } from './component-interaction/parent/parent.component';
+import { ChildComponent } from './component-interaction/child/child.component';
+import { EmployeeListComponent } from './EmployeeComponents/employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './EmployeeComponents/employee-details/employee-details.component';
+import { EmployeeServiceService } from './EmployeeServices/employee-service.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,11 @@ import { SquarePipe } from './custom-pipes/square.pipe';
     PipesComponent,
     TestComponent,
     PrintmsgPipe,
-    SquarePipe
+    SquarePipe,
+    ParentComponent,
+    ChildComponent,
+    EmployeeListComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,9 @@ import { SquarePipe } from './custom-pipes/square.pipe';
     // AuthModule,
     FormsModule
   ],
-  providers: [],
+// providers: [EmployeeServiceService],
+  providers: [EmployeeServiceService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { 

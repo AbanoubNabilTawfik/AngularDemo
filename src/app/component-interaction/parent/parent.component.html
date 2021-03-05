@@ -1,0 +1,6 @@
+<p>parent works!</p>
+
+<!-- <app-child (msgFromChild)="msgFromChildProp=$event" [parentData]="msg"></app-child> -->
+<app-child (msgFromChild)="printMsg()" [parentData]="msg"></app-child>
+
+{{msgFromChildProp}}
