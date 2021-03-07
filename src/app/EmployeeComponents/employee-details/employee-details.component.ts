@@ -10,11 +10,23 @@ export class EmployeeDetailsComponent implements OnInit {
  
 
   employeeList=[];
+  errorMsg;
   constructor(private empServiceData:EmployeeServiceService) { }
 
   ngOnInit(): void {
     // console.log(this.employeeList)
-    this.employeeList=this.empServiceData.getAllEmployees();
+    //this.employeeList=this.empServiceData.getAllEmployees();
+     this.empServiceData.getAllEmployees().subscribe(
+       data=>
+       {
+         this.employeeList=data;
+       },
+       error=>
+       {
+          this.errorMsg=error;
+       }
+     )
+
   }
 
 }

@@ -24,7 +24,10 @@ import { ChildComponent } from './component-interaction/child/child.component';
 import { EmployeeListComponent } from './EmployeeComponents/employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './EmployeeComponents/employee-details/employee-details.component';
 import { EmployeeServiceService } from './EmployeeServices/employee-service.service';
-
+import {HttpClientModule} from '@angular/common/http';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,13 +48,17 @@ import { EmployeeServiceService } from './EmployeeServices/employee-service.serv
     ParentComponent,
     ChildComponent,
     EmployeeListComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    DepartmentListComponent,
+    PageNotFoundComponent,
+    DepartmentDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // AuthModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
 // providers: [EmployeeServiceService],
   providers: [EmployeeServiceService],
