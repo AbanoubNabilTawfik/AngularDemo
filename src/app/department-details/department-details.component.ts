@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-department-details',
@@ -16,6 +16,20 @@ export class DepartmentDetailsComponent implements OnInit {
      {
         this.deptId=parseInt(params.get('id'));
      })
+  }
+  goToDepartmentList()
+  {
+    this.router.navigate(['/departments',{id:this.deptId}])
+  }
+  goToContactInformation()
+  {
+    this.router.navigate(['contact-information'],{relativeTo:this.activatedRoute})
+
+  }
+
+  goToOverView()
+  {
+    this.router.navigate(['overview'],{relativeTo:this.activatedRoute})
   }
 
   goPrev()

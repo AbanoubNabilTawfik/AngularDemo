@@ -28,6 +28,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { OverviewComponent } from './overview/overview.component';
+import { ContactInformationComponent } from './contact-information/contact-information.component';
+import { EnrollComponent } from './enroll/enroll.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,10 @@ import { DepartmentDetailsComponent } from './department-details/department-deta
     EmployeeDetailsComponent,
     DepartmentListComponent,
     PageNotFoundComponent,
-    DepartmentDetailsComponent
+    DepartmentDetailsComponent,
+    OverviewComponent,
+    ContactInformationComponent,
+    EnrollComponent
   ],
   imports: [
     BrowserModule,
