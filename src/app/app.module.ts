@@ -13,7 +13,7 @@ import { BindingComponent } from './binding/binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { TestComponent } from './pipes/test/test.component';
@@ -31,6 +31,7 @@ import { DepartmentDetailsComponent } from './department-details/department-deta
 import { OverviewComponent } from './overview/overview.component';
 import { ContactInformationComponent } from './contact-information/contact-information.component';
 import { EnrollComponent } from './enroll/enroll.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,14 +58,16 @@ import { EnrollComponent } from './enroll/enroll.component';
     DepartmentDetailsComponent,
     OverviewComponent,
     ContactInformationComponent,
-    EnrollComponent
+    EnrollComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     // AuthModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
 // providers: [EmployeeServiceService],
   providers: [EmployeeServiceService],
